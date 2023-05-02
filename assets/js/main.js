@@ -4,15 +4,17 @@ $(document).ready(function() {
         $(`.title-${elem}`).removeClass('animate__animated')
         $(`#${elem}`).addClass('show')
     })
-    $('#pagepiling').pagepiling({
-        direction: 'horizontal',
-        sectionsColor: ['#ffffff', '#004520s', '#ffffff'],
-        verticalCentered: false,
-        navigation: true,
-        anchors: ['section-1', 'section-2', 'section-3'],
-        keyboardScrolling: true
-    });
-    $.fn.pagepiling.setAllowScrolling(false)
+    if ($('#pagepiling').length > 0) {
+        $('#pagepiling').pagepiling({
+            direction: 'horizontal',
+            sectionsColor: ['#ffffff', '#004520s', '#ffffff'],
+            verticalCentered: false,
+            navigation: true,
+            anchors: ['section-1', 'section-2', 'section-3'],
+            keyboardScrolling: false
+        });
+        $.fn.pagepiling.setAllowScrolling(false)
+    }
     $('#mapa').load('./assets/img/mapa.svg')
     $('.hoverable').hover(function() {
         console.log("Foasd")

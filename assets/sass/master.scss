@@ -1343,7 +1343,8 @@ a {
     }
 }
 
-#section-2-3 {
+#section-2-3,
+#section-2-4 {
     display: flex;
     padding: 4rem;
     background-color: rgba($color: #F2F2F2, $alpha: 0.92);
@@ -1357,11 +1358,11 @@ a {
         flex-grow: 1;
         display: grid;
         align-items: center;
-        grid-template-columns: 1fr 3fr;
-        gap: 60px;
+        justify-content: space-between; 
+        grid-template-columns: 35% 60%;
         border-top: 1px solid #13BF9E;
         border-bottom: 1px solid #13BF9E;
-        padding: 1rem 2rem;
+        padding: 1rem 5rem;
         margin: 2rem 0;
     }
 }
@@ -1377,6 +1378,7 @@ strong {
 .boton-book {
     display: inline-flex;
     align-items: center;
+    justify-content: space-between;
     font-size: 1.3rem;
     padding: 1rem 1.5rem;
     border-radius: 10px;
@@ -1385,8 +1387,8 @@ strong {
     transition: all ease-in-out .3s;
     line-height: 1;
     margin-top: .5rem;
-    max-width: 90%;
-
+    max-width: 300px;
+    min-width: 300px;
     img {
         max-width: 35px;
         margin-left: 1rem;

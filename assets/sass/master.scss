@@ -265,6 +265,16 @@ a {
         display: flex;
         align-items: stretch;
 
+        &.dark {
+            .title {
+                border-left: 2px solid #1A1A1A;
+            }
+
+            h3 {
+                color: #1A1A1A !important;
+            }
+        }
+
         img {
             display: inline;
             margin-right: 2rem;
@@ -1333,12 +1343,63 @@ a {
     }
 }
 
+#section-2-3 {
+    display: flex;
+    padding: 4rem;
+    background-color: rgba($color: #F2F2F2, $alpha: 0.92);
+
+    .content-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content {
+        flex-grow: 1;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 3fr;
+        gap: 60px;
+        border-top: 1px solid #13BF9E;
+        border-bottom: 1px solid #13BF9E;
+        padding: 1rem 2rem;
+        margin: 2rem 0;
+    }
+}
+
 strong {
     font-weight: 700;
 }
 
 .hide {
-    display: none!important;
+    display: none !important;
+}
+
+.boton-book {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.3rem;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    color: #52A678;
+    border: 1px solid #52A678;
+    transition: all ease-in-out .3s;
+    line-height: 1;
+    margin-top: .5rem;
+    max-width: 90%;
+
+    img {
+        max-width: 35px;
+        margin-left: 1rem;
+    }
+
+    &:hover {
+        background-color: #52A678;
+        color: #fff;
+
+        img {
+            filter: brightness(3) saturate(100%) hue-rotate(131deg);
+        }
+    }
 }
 
 .section {
@@ -1403,6 +1464,21 @@ strong {
             animation: arrow-bounce 2s infinite;
         }
     }
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;/* ratio 16:9 */
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 @keyframes arrow-bounce {
@@ -1501,6 +1577,7 @@ th {
     color: #fff;
     width: 25%;
 }
+
 td {
     background-color: white;
     border: 1px solid black;

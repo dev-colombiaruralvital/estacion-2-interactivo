@@ -1129,16 +1129,6 @@ a {
                         top: 100%;
                     }
                 }
-
-                .hand {
-                    position: absolute;
-                    top: 50%;
-                    height: 50px;
-                    width: 35px;
-                    left: -45px;
-                    transform: translateY(-50%);
-                    animation: clic-hand 1s infinite;
-                }
             }
 
             .number {
@@ -1657,4 +1647,24 @@ td {
             color: #fff;
         }
     }
+}
+
+.hand-shake {
+    position: absolute;
+    top: 50%;
+    height: 50px;
+    width: 35px;
+    left: -45px;
+    transform: translateY(-50%);
+    animation: clic-hand 1s infinite;
+}
+
+.hand {
+    position: absolute;
+    top: 50%;
+    height: 50px;
+    width: 35px;
+    left: -45px;
+    transform: translateY(-50%);
+    animation: clic-hand 1s infinite;
 }
